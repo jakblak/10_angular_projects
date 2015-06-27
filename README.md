@@ -1,4 +1,4 @@
-[10 Angular Courses](https://www.udemy.com/learn-angularjs-development/#/)
+Based on [Udemy 10 Angular Courses](https://www.udemy.com/learn-angularjs-development/#/)
 
 - Refactored to John Papa styleguide
 
@@ -8,6 +8,6 @@
 
 ### Instagram Gallery App
 - ngRoute, ngResource, bootstrapLightbox, instagram API
-- [Lightbox](https://github.com/compact/angular-bootstrap-lightbox)
+- [Angular Lightbox](https://github.com/compact/angular-bootstrap-lightbox)
 - *node server*    (simple express)
 - display popular photos, click on photo to create lightbox.  Uses angular.forEach() to scroll through
