@@ -1,0 +1,21 @@
+.gallery {
+  margin-bottom: 10px;
+}
+
+.gallery img.main {
+  width: 100%;
+}
+
+.imgInfo {
+  text-align: center;
+  background: #6B6B6B;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+
+.avatar {
+  width: 40px;
+  margin-right: 10px;
+}

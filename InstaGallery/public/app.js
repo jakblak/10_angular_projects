@@ -1,10 +1,11 @@
-var app = angular.module('galPhoto',['ngRoute']);
+(function() {
+  'use strict';
 
-app.config(['$routeProvider', function($routeProvider){
-	$routeProvider.
-		when('/gallery', {
-			templateUrl: 'views/gallery.view.html',
-			controller: 'GalleryCtrl'
-		})
-		.otherwise({redirectTo: '/gallery'});
-}]);
+  angular
+    .module('app', [
+      'ngRoute',
+      'ngResource',
+      'bootstrapLightbox'
+    ])
+
+})();
