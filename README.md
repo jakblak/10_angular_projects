@@ -15,3 +15,5 @@ Based on [Udemy 10 Angular Courses](https://www.udemy.com/learn-angularjs-develo
 - MEAN.js
 - Fetch and Display
 - CRUD for cars
+- public/modules/core...
+
