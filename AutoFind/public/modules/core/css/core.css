@@ -30,3 +30,7 @@ body.ng-cloak
 	border:1px #ccc solid;
 	padding:5px;
 }
+
+.car {
+	margin-bottom:20px;
+}

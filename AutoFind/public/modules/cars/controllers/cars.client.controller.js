@@ -10,7 +10,14 @@ angular.module('cars').controller('CarsController', ['$scope', '$stateParams', '
 			// Create new Car object
 			var car = new Cars({
 				title: this.title,
-				content: this.content
+				make: this.make,
+				model: this.model,
+				type: this.type,
+				year: this.year,
+				price: this.price,
+				description: this.description,
+				state: this.state,
+				contact_email: this.contact_email
 			});
 
 			// Redirect after save
@@ -19,7 +26,14 @@ angular.module('cars').controller('CarsController', ['$scope', '$stateParams', '
 
 				// Clear form fields
 				$scope.title = '';
-				$scope.content = '';
+				$scope.make = '';
+				$scope.model = '';
+				$scope.type = '';
+				$scope.year = '';
+				$scope.price = '';
+				$scope.description = '';
+				$scope.state = '';
+				$scope.contact_email = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
