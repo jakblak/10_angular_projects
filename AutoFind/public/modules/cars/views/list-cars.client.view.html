@@ -1,0 +1,21 @@
+<section data-ng-controller="CarsController" data-ng-init="find()">
+	<div class="page-header">
+		<h1>Latest Cars</h1>
+	</div>
+
+	<div class="row car" ng-repeat="car in cars">
+		<div class="col-md-3">
+			<img class="img-thumbnail" src="img/camry.jpg">
+		</div>
+		<div class="col-md-9">
+			<h3>{{car.title}}</h3>
+			<ul>
+				<li>Make: {{car.make}}</li>
+				<li>Model: {{car.year}} {{car.model}}</li>
+				<li>Price: {{car.price}}</li>
+			</ul>
+			<a href="/#!/cars/{{car._id}}">View Details</a>
+		</div>
+	</div>
+
+</section>

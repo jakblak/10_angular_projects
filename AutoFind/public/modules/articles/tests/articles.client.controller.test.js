@@ -2,7 +2,7 @@
 
 (function() {
 	// Articles Controller Spec
-	describe('Articles Controller Tests', function() {
+	describe('ArticlesController', function() {
 		// Initialize global variables
 		var ArticlesController,
 			scope,

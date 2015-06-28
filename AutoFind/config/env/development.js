@@ -1,24 +1,9 @@
 'use strict';
 
 module.exports = {
-	db: {
-		uri: 'mongodb://localhost/autofind',
-		options: {
-			user: '',
-			pass: ''
-		}
-	},
-	log: {
-		// Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'
-		format: 'dev',
-		// Stream defaults to process.stdout
-		// Uncomment to enable logging to a log on the file system
-		options: {
-			//stream: 'access.log'
-		}
-	},
+	db: 'mongodb://localhost/autofinder-dev',
 	app: {
-		title: 'Autofind App'
+		title: 'autoFinder - Development Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',

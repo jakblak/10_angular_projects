@@ -11,9 +11,10 @@ Based on [Udemy 10 Angular Courses](https://www.udemy.com/learn-angularjs-develo
 - *node server*    (simple express)
 - display popular photos, click on photo to create lightbox.  Uses angular.forEach() to scroll through
 
-### Auto Find
+### AutoFind
 - MEAN.js
-- Fetch and Display
+- Fetch and Display cars
 - CRUD for cars
 - public/modules/core...
+- new *cars* module   -  copy from articles, make changes
 

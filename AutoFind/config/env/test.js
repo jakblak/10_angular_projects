@@ -1,25 +1,10 @@
 'use strict';
 
 module.exports = {
-	db: {
-		uri: 'mongodb://localhost/mean-test',
-		options: {
-			user: '',
-			pass: ''
-		}
-	},
+	db: 'mongodb://localhost/autofinder-test',
 	port: 3001,
-	log: {
-		// Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'
-		format: 'dev',
-		// Stream defaults to process.stdout
-		// Uncomment to enable logging to a log on the file system
-		options: {
-			//stream: 'access.log'
-		}
-	},
 	app: {
-		title: 'MEAN.JS - Test Environment'
+		title: 'autoFinder - Test Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
