@@ -20,4 +20,5 @@ Based on [Udemy 10 Angular Courses](https://www.udemy.com/learn-angularjs-develo
 - new *cars* module   -  copy from articles, make changes
 - create cars collection and insert some data in mongo shell
 - add $scope.find() to core controller to populate front page with cars
+- - use car.name notation on edit-car.html view
 
