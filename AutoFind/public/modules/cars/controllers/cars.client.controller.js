@@ -16,6 +16,7 @@ angular.module('cars').controller('CarsController', ['$scope', '$stateParams', '
 				year: this.year,
 				price: this.price,
 				description: this.description,
+				imageUrl: this.imageUrl,
 				state: this.state,
 				contact_email: this.contact_email
 			});
@@ -32,6 +33,7 @@ angular.module('cars').controller('CarsController', ['$scope', '$stateParams', '
 				$scope.year = '';
 				$scope.price = '';
 				$scope.description = '';
+				$scope.imageUrl = '';
 				$scope.state = '';
 				$scope.contact_email = '';
 			}, function(errorResponse) {
