@@ -12,9 +12,12 @@ Based on [Udemy 10 Angular Courses](https://www.udemy.com/learn-angularjs-develo
 - display popular photos, click on photo to create lightbox.  Uses angular.forEach() to scroll through
 
 ### AutoFind
-- MEAN.js
+- MEAN.js               (me, 4444)
+- *Update ui-bootstrap* to version 0.12
 - Fetch and Display cars
 - CRUD for cars
 - public/modules/core...
 - new *cars* module   -  copy from articles, make changes
+- create cars collection and insert some data in mongo shell
+- add $scope.find() to core controller to populate front page with cars
 
