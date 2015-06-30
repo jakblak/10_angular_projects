@@ -1,9 +1,25 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res) {
-  res.send('respond with a resource');
+var Category = require('../models/category');
+
+/* GET categories the base '/' goes to '/categories' */
+router.get('/', function(req, res, next) {
+  Category.getCategories(function(err, categories) {
+    if(err) {
+      console.log(err);
+    }
+    res.json(categories);
+  });
+});
+
+router.get('/:id', function(req, res, next) {
+  Category.getCategoryById(req.params.id, function(err, category) {
+    if(err) {
+      console.log(err);
+    }
+    res.json(category);
+  });
 });
 
 module.exports = router;

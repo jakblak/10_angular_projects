@@ -4,7 +4,8 @@ Based on [Udemy 10 Angular Courses](https://www.udemy.com/learn-angularjs-develo
 - uses un-minified angular.js for better error messages
 - uses CDN for angular-bootstrap  (bower errors)
 <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
-- db.createCollection('articles');     -    db.articles.insert({ title : 'Artilce one' })
+- db.createCollection('articles');     -    db.articles.insert({ title : 'Artilce one' })   
+- db.categories.update({name:'Technology'}, {$set: {description: 'learn more about tech stuff'}})
 
 ### Instagram Gallery App
 - ngRoute, ngResource, bootstrapLightbox, instagram API
@@ -25,4 +26,3 @@ Based on [Udemy 10 Angular Courses](https://www.udemy.com/learn-angularjs-develo
 
 ### Knowledgebase
 - MEAN stack app, scaffold using Express
-- 5:09
