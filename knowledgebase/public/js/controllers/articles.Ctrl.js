@@ -9,5 +9,14 @@
     // .controller('ArticlesCreateCtrl', ArticlesCreateCtrl)
     // .controller('ArticlesEditCtrl', ArticlesEditCtrl);
 
-    ArticlesCtrl.$inject = ['$route'];
+    ArticlesCtrl.$inject = ['$scope', '$http'];
+
+    function ArticlesCtrl($scope, $http) {
+
+      $http.get('/articles')
+        .success(function(data) {
+          $scope.articles = data;
+        });
+    }
+
 })();

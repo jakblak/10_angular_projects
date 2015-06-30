@@ -13,6 +13,11 @@
       .success(function(data) {
         $scope.categories = data;
       });
+
+    $http.get('/articles')
+      .success(function(data) {
+        $scope.articles = data;
+      });
   }
 
 })();
