@@ -1,1 +1,18 @@
-Article Categories
+<h3 class="heading">{{category}} Articles</h3>
+<a href="#/categories">Go Back</a>
+<div class="row">
+  <div class="articles">
+    <div ng-repeat="article in cat_articles">
+      <div class="col-md-12">
+        <div class="article">
+          <h4>{{ article.title }}</h4>
+          <p>{{ article.body | limitTo:30 }}</p>
+          <a class="btn btn-default" href="#/articles/details/{{article._id}}">Read Articles</a>
+        </div>
+      </div>
+    </div>
+    <div ng-if="articles == false">
+      No articles to display
+    </div>
+  </div>
+</div>

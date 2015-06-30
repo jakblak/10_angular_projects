@@ -3,19 +3,29 @@
 
   angular
     .module('app')
-    .controller('ArticlesCtrl', ArticlesCtrl);
-    // .controller('ArticlesDetailCtrl', ArticlesDetailCtrl)
-    // .controller('ArticlesCatCtrl', ArticlesCatCtrl)
-    // .controller('ArticlesCreateCtrl', ArticlesCreateCtrl)
-    // .controller('ArticlesEditCtrl', ArticlesEditCtrl);
+    .controller('ArticlesCtrl', ArticlesCtrl)
+  // .controller('ArticlesDetailCtrl', ArticlesDetailCtrl)
+  .controller('ArticlesCatCtrl', ArticlesCatCtrl);
+  // .controller('ArticlesCreateCtrl', ArticlesCreateCtrl)
+  // .controller('ArticlesEditCtrl', ArticlesEditCtrl);
 
-    ArticlesCtrl.$inject = ['$scope', '$http'];
+  ArticlesCtrl.$inject = ['$scope', '$http'];
+  ArticlesCatCtrl.$inject = ['$scope', '$http', '$routeParams'];
 
     function ArticlesCtrl($scope, $http) {
 
       $http.get('/articles')
         .success(function(data) {
           $scope.articles = data;
+        });
+    }
+
+    function ArticlesCatCtrl($scope, $http, $routeParams) {
+
+      $http.get('/articles/category' + $routeParams.category)
+        .success(function(data) {
+          $scope.cat_articles = data;
+          $scope.category = $routeParams.category;
         });
     }
 

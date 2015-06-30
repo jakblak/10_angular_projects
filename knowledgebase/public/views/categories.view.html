@@ -18,7 +18,7 @@
       <div class="col-md-12">
         <div class="article">
           <h4>{{ article.title }}</h4>
-          <p>{{ article.body }}</p>
+          <p>{{ article.body | limitTo:30 }}</p>
           <a class="btn btn-default" href="#/articles/details/{{article._id}}">Read Articles</a>
         </div>
       </div>
