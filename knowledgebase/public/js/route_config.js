@@ -7,7 +7,7 @@
 
     config.$inject = ['$routeProvider'];
 
-    function config() {
+    function config($routeProvider) {
       $routeProvider
         .when('/categories', {
           templateUrl: 'views/categories.view.html',
@@ -18,23 +18,19 @@
           controller: 'ArticlesCtrl'
         })
         .when('/articles/details/:id', {
-          templateUrl: 'views/articles.detail.html',
+          templateUrl: 'views/articles_detail.html',
           controller: 'ArticlesDetailCtrl'
         })
         .when('/articles/category/:category', {
           templateUrl: 'views/cat_articles.view.html',
           controller: 'ArticlesCatCtrl'
         })
-        .when('/categories', {
-          templateUrl: 'views/categories.view.html',
-          controller: 'CategoriesCtrl'
-        })
-        .when('/articles/add/:category', {
-          templateUrl: 'views/add_articles.view.html',
+        .when('/articles/add/:article', {
+          templateUrl: 'views/add_article.view.html',
           controller: 'ArticlesCreateCtrl'
         })
         .when('/articles/edit/:id', {
-          templateUrl: 'views/edit_articles.view.html',
+          templateUrl: 'views/edit_article.view.html',
           controller: 'ArticlesEditCtrl'
         })
         .otherwise({
