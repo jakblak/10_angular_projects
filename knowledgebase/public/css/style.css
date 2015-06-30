@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+footer {
+  background: #333;
+  color: #fff;
+  height: 40px;
+  padding-top: 10px;
+  text-align: center;
+}
