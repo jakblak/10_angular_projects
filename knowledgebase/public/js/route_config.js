@@ -18,16 +18,16 @@
           controller: 'ArticlesCtrl'
         })
         .when('/articles/details/:id', {
-          templateUrl: 'views/articles_detail.html',
+          templateUrl: 'views/article_details.view.html',
           controller: 'ArticlesDetailCtrl'
         })
         .when('/articles/category/:category', {
           templateUrl: 'views/cat_articles.view.html',
           controller: 'ArticlesCatCtrl'
         })
-        .when('/articles/add/:article', {
+        .when('/articles/add', {
           templateUrl: 'views/add_article.view.html',
-          controller: 'ArticlesCreateCtrl'
+          controller: 'ArticleCreateCtrl'
         })
         .when('/articles/edit/:id', {
           templateUrl: 'views/edit_article.view.html',
