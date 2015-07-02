@@ -11,7 +11,7 @@
 
   ArticlesCtrl.$inject = ['$scope', '$http'];
   ArticlesCatCtrl.$inject = ['$scope', '$http', '$routeParams'];
-  ArticlesDetailCtrl.$inject = ['$scope', '$http', '$routeParams'];
+  ArticlesDetailCtrl.$inject = ['$scope', '$http', '$routeParams', '$location'];
   ArticleCreateCtrl.$inject = ['$scope', '$http', '$routeParams', '$location'];
   ArticleEditCtrl.$inject = ['$scope', '$http', '$routeParams', '$location'];
 
@@ -23,18 +23,26 @@
   }
 
   function ArticlesCatCtrl($scope, $http, $routeParams) {
-    $http.get('/articles/category' + $routeParams.category)
+    $http.get('/articles/category/' + $routeParams.category)
       .success(function(data) {
         $scope.cat_articles = data;
         $scope.category = $routeParams.category;
       });
   }
 
-  function ArticlesDetailCtrl($scope, $http, $routeParams) {
+  function ArticlesDetailCtrl($scope, $http, $routeParams, $location) {
     $http.get('/articles/' + $routeParams.id)
       .success(function(data) {
         $scope.article = data;
       });
+
+      $scope.removeArticle = function() {
+        $http.delete('/articles/' + $routeParams.id)
+          .success(function(data) {
+            console.log(data);
+          });
+          $location.path('#/articles');
+      }
   }
 
   function ArticleCreateCtrl($scope, $http, $routeParams, $location) {
