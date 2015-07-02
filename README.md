@@ -27,4 +27,4 @@ Based on [Udemy 10 Angular Courses](https://www.udemy.com/learn-angularjs-develo
 ### Knowledgebase
 - MEAN stack app, scaffold using Express
 - ngRoute, Bootstrap  (starter html template)
-- 9 26
+- CRUD app for articles w/ categories

@@ -4,13 +4,16 @@
   angular
     .module('app')
     .controller('ArticlesCtrl', ArticlesCtrl)
-    .controller('ArticlesDetailCtrl', ArticlesDetailCtrl)
     .controller('ArticlesCatCtrl', ArticlesCatCtrl)
-    .controller('ArticleCreateCtrl', ArticleCreateCtrl);
-    //.controller('ArticlesEditCtrl', ArticlesEditCtrl);
+    .controller('ArticlesDetailCtrl', ArticlesDetailCtrl)
+    .controller('ArticleCreateCtrl', ArticleCreateCtrl)
+    .controller('ArticleEditCtrl', ArticleEditCtrl);
 
   ArticlesCtrl.$inject = ['$scope', '$http'];
   ArticlesCatCtrl.$inject = ['$scope', '$http', '$routeParams'];
+  ArticlesDetailCtrl.$inject = ['$scope', '$http', '$routeParams'];
+  ArticleCreateCtrl.$inject = ['$scope', '$http', '$routeParams', '$location'];
+  ArticleEditCtrl.$inject = ['$scope', '$http', '$routeParams', '$location'];
 
   function ArticlesCtrl($scope, $http) {
     $http.get('/articles')
@@ -34,8 +37,50 @@
       });
   }
 
-  function ArticleCreateCtrl() {
+  function ArticleCreateCtrl($scope, $http, $routeParams, $location) {
+    $http.get('/categories')
+      .success(function(data) {
+        $scope.categories = data;
+      });
 
+      $scope.addArticle = function() {
+        var data = {
+          title: $scope.title,
+          body: $scope.body,
+          category: $scope.category
+        }
+        $http.post('/articles', data)
+          .success(function(data, status) {
+            console.log(status);
+          });
+          $location.path('/articles');
+      }
   }
 
+  function ArticleEditCtrl($scope, $http, $routeParams, $location) {
+    $http.get('/categories')
+      .success(function(data) {
+        $scope.categories = data;
+      });
+
+      $http.get('/articles/' + $routeParams.id)
+      .success(function(data) {
+        $scope.article = data;
+      });
+
+      $scope.updateArticle = function() {
+        var data = {
+          id: $routeParams.id,
+          title: $scope.article.title,
+          body: $scope.article.body,
+          category: $scope.article.category
+        }
+
+        $http.put('/articles', data)
+          .success(function(data, status) {
+            console.log(status);
+          });
+          $location.path('/articles');
+      }
+  }
 })();
