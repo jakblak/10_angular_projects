@@ -28,3 +28,12 @@ Based on [Udemy 10 Angular Courses](https://www.udemy.com/learn-angularjs-develo
 - MEAN stack app, scaffold using Express
 - ngRoute, Bootstrap  (starter html template)
 - CRUD app for articles w/ categories
+
+## JobFinder
+- uses MEAN.js scaffold
+- CRUD app for creating jobs
+
+## Sails Auth
+- User Auth App
+- Sails, Foundation, Toastr
+- > sails new    > sails generate api user
