@@ -1,0 +1,54 @@
+<h4> Welcome {{username}}, click to select a channel below [<a href="#">Sign Out</a>]</h4>
+
+<ul class="list-unstyled list-inline">
+  <li class="roomlabel" ng-repeat="channel in channels"></li>
+  <li class="roomlabel">
+    <a class="btn btn-default" href="" ng-click="showCreate = !showCreate">
+      <i class="fa fa-magic"></i> Create New...
+    </a>
+  </li>
+  <div ng-show='showCreate'>
+        <form ng-submit='createChannel()'>
+            <h6>Create New Room</h6>
+            <div class='input-group'>
+                <input class='input-sm form-control' ng-model='newChannel' placeholder='Room Name' type='text'>
+                <span class='input-group-btn'>
+                    <input class='input-sm btn btn-default' type='submit' value='Go!'>
+                </span>
+            </div>
+            <br>
+            <br>
+        </form>
+    </div>
+</ul>
+<br>
+<div class="row">
+  <div class="col-md-2">
+    <small class="marker">Users In Room</small>
+    <ul class="list-unstyled">
+      <li ng-repeat="user in users">
+
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-10">
+    <form ng-submit='publish()'>
+            <div class='input-group'>
+                <input class='input-sm form-control' ng-model='newMessage' type='text' placeholder="Type a message...">
+                <span class='input-group-btn'>
+                    <input class='input-sm btn btn-default' type='submit' value='Send'>
+                </span>
+            </div>
+      </form>
+      <br>
+      <div class='well chatbox' id='chat_history'>
+            <ul class='list-unstyled'>
+                <li ng-repeat='message in messages'>
+                    <i class='fa fa-comment'></i>
+                &nbsp;
+                {{message}}
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
