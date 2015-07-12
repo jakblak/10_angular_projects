@@ -19,10 +19,10 @@
 
     // Publish Chat
     $scope.publish = function() {
-      if (channel === $scope.selectedChannel) {
+      if (!$scope.selectedChannel) {
         return;
       }
-      PubNub.publish({
+      PubNub.ngPublish({
         channel: $scope.selectedChannel,
         message: {
           text: $scope.newMessage,

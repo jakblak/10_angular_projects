@@ -1,7 +1,12 @@
-<h4> Welcome {{username}}, click to select a channel below [<a href="#">Sign Out</a>]</h4>
+<h4> Welcome {{data.username}}, click to select a channel below [<a href="#/join">Sign Out</a>]</h4>
 
 <ul class="list-unstyled list-inline">
-  <li class="roomlabel" ng-repeat="channel in channels"></li>
+  <li class='roomlabel' ng-repeat='channel in channels'>
+        <a class='btn btn-info' href='' ng-class="{'label-default': user != data.username, 'label-default': (channel != selectedChannel), 'label-success':(channel == selectedChannel)}" ng-click='subscribe(channel)'>
+    <i class='fa' ng-class="{'fa-spin':(channel == selectedChannel), 'fa-spinner':(channel == selectedChannel), 'fa-comments':(channel != selectedChannel)}"></i>
+    {{channel}}
+    </a>
+    </li>
   <li class="roomlabel">
     <a class="btn btn-default" href="" ng-click="showCreate = !showCreate">
       <i class="fa fa-magic"></i> Create New...
@@ -26,9 +31,12 @@
   <div class="col-md-2">
     <small class="marker">Users In Room</small>
     <ul class="list-unstyled">
-      <li ng-repeat="user in users">
-
-      </li>
+      <li ng-repeat='user in users'>
+                <span class='label btn-mini userlabel' ng-class="{'label-default': user != data.username, 'label-success': (user == data.username)}" title='(Location: {{userData[user].city || "unknown"}})'>
+                    <i class='fa fa-user'></i>
+                {{user}}
+                </span>
+            </li>
     </ul>
   </div>
   <div class="col-md-10">
