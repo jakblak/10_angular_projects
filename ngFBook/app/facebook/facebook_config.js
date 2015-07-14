@@ -16,7 +16,7 @@
     $facebookProvider
       .setAppId(secrets.ID);
     $facebookProvider
-      .setPermissions('email', 'public_profile', 'user_posts', 'publish_actions', 'user_photos');
+      .setPermissions("email,public_profile, user_posts, publish_actions, user_photos");
     $routeProvider
       .when('/facebook', {
         templateUrl: 'facebook/facebook.html',

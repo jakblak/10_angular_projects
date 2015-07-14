@@ -32,6 +32,18 @@
           $scope.isLoggedIn = true;
           $scope.welcomeMsg = 'Welcome ' + response.name;
           $scope.userInfo = response;
+          $facebook.api('/me/picture')
+            .then(function(response) {
+              $scope.picture = response.data.url;
+              $facebook.api('/me/permissions')
+                .then(function(response) {
+                  $scope.permissions = response.data;
+                  $facebook.api('/me/posts')
+                    .then(function(response) {
+                      $scope.posts = response.data;
+                    });
+                });
+            });
         },
         function(err) {
           $scope.welcomeMsg = 'Please Log In';
