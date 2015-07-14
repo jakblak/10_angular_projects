@@ -43,12 +43,10 @@ Based on [Udemy 10 Angular Courses](https://www.udemy.com/learn-angularjs-develo
 - Log in + Create Room + Chat
 - add Presence (detects user leaves/joins channel), Storage & Playback
 
+## ngSocial FB
+- ngSeed, FB Graph API     -  npm start  =  localhost:8000
+- make GET and POST requests, Login auth, read from wall, post to wall
+- bower install ng-facebook bootstrap    
+- add Nav bar + *Cerulean* bootswatch
 
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+  
