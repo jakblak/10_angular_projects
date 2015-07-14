@@ -46,7 +46,7 @@ Based on [Udemy 10 Angular Courses](https://www.udemy.com/learn-angularjs-develo
 ## ngSocial FB
 - ngSeed, FB Graph API     -  npm start  =  localhost:8000
 - make GET and POST requests, Login auth, read from wall, post to wall
-- bower install ng-facebook bootstrap    
+- bower install ng-facebook bootstrap            [ngFacebook](https://github.com/GoDisco/ngFacebook)
 - add Nav bar + *Cerulean* bootswatch
 
   
