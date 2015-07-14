@@ -50,6 +50,17 @@
         });
     }
 
+    $scope.postStatus = function() {
+      var body = this.postBody;
+      $facebook.api('/me/feed', 'post', {
+        message: body
+      })
+      .then(function(response) {
+        $scope.msg = 'Thanks for Posting';
+        refresh();
+      });
+    }
+
     refresh();
   }
 })();
