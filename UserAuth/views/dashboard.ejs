@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--STYLES-->
+		<link rel="stylesheet" href="/styles/angular-toastr.css">
+		<link rel="stylesheet" href="/styles/app.css">
+		<link rel="stylesheet" href="/styles/foundation.css">
+		<link rel="stylesheet" href="/styles/importer.css">
+		<!--STYLES END-->
+	</head>
+	<body ng-app="DashMod" ng-controller="DashCtrl" ng-init="getUser()">
+		<nav class="top-bar" data-topbar role="navigation">
+			  <ul class="title-area">
+			    <li class="name">
+			      <h1><a href="#">Dashboard</a></h1>
+			    </li>
+			     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+			    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			  </ul>
+
+			  <section class="top-bar-section">
+			    <!-- Right Nav Section -->
+			    <ul class="right">
+			      <li class="active"><a href="#" ng-click="logout()">Logout</a></li>
+			    </ul>
+
+			    
+			  </section>
+			</nav>
+			<div class="row">
+				<h1>Dashboard</h1>
+				<div class="row">
+					<div class="large-2 columns">
+						<img ng-src="{{user.gravatarUrl}}">
+					</div>
+					<div class="large-8 columns">
+						<ul>
+							<li>Name: {{user.name}}</li>
+							<li>Email: {{user.email}}</li>
+							<li>Member Since: {{user.createdAt}}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+	<!--SCRIPTS-->
+	<script src="/js/dependencies/sails.io.js"></script>
+	<script src="/js/dependencies/jquery-1.11.3.js"></script>
+	<script src="/js/dependencies/angular.js"></script>
+	<script src="/js/dependencies/angular-toastr.js"></script>
+	<script src="/js/dependencies/angular-toastr.tpls.js"></script>
+	<script src="/js/dependencies/foundation.min.js"></script>
+	<script src="/js/public/signup/SignupMod.js"></script>
+	<script src="/js/public/signup/SignupCtrl.js"></script>
+	<script src="/js/public/login/LoginMod.js"></script>
+	<script src="/js/public/login/LoginCtrl.js"></script>
+	<!--SCRIPTS END-->
+	</body>
+</html>

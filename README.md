@@ -34,7 +34,7 @@ Based on [Udemy 10 Angular Courses](https://www.udemy.com/learn-angularjs-develo
 
 ## Sails Auth
 - User Auth App
-- Sails, Foundation, Toastr
+- Sails, Foundation, Toastr, Node-Machine (gravatar/password decryption)
 - > sails new    > sails generate api user
 
 ## PubNub Chat
